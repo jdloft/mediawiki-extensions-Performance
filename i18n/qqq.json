@@ -4,6 +4,6 @@
 			"Jamison Lofthouse"
 		]
 	},
-	"boilerplate-desc": "{{desc|name=Performance|url=http://www.mediawiki.org/wiki/Manual:Extensions}}",
+	"performance-desc": "{{desc|name=Performance|url=http://www.mediawiki.org/wiki/Manual:Extensions}}",
 	"boilerplate-i18n-welcome": "Used to greet the user when reading the .i18n.php file."
 }
