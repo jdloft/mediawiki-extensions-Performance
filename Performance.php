@@ -50,7 +50,7 @@ $wgResourceModules['ext.BoilerPlate.foo'] = array(
 	),
 
 	'localBasePath' => __DIR__,
-	'remoteExtPath' => 'examples/BoilerPlate',
+	'remoteExtPath' => 'Performance',
 );
 
 
