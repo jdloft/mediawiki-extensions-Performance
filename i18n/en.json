@@ -5,5 +5,7 @@
 		]
 	},
 	"performance-desc": "Flexible utility panel",
+	"performance-special": "Performance",
+	"performance-special-text": "TODO",
 	"boilerplate-i18n-welcome": "Welcome to the localization file of the BoilerPlate extension."
 }

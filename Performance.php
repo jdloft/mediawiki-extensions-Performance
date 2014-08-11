@@ -23,7 +23,7 @@ $wgExtensionCredits['other'][] = array(
 
 // Register files
 $wgAutoloadClasses['PerformanceHooks'] = __DIR__ . '/Performance.hooks.php';
-//$wgAutoloadClasses['SpecialHelloWorld'] = __DIR__ . '/specials/SpecialHelloWorld.php'; // Retained for reference
+$wgAutoloadClasses['SpecialPerformance'] = __DIR__ . '/specials/SpecialPerformance.php';
 $wgMessagesDirs['Performance'] = __DIR__ . '/i18n';
 $wgExtensionMessagesFiles['PerformanceAlias'] = __DIR__ . '/Performance.i18n.alias.php';
 
@@ -31,8 +31,8 @@ $wgExtensionMessagesFiles['PerformanceAlias'] = __DIR__ . '/Performance.i18n.ali
 //$wgHooks['NameOfHook'][] = 'PerformanceHooks::onNameOfHook';
 
 // Register special pages
-//$wgSpecialPages['HelloWorld'] = 'SpecialHelloWorld';
-//$wgSpecialPageGroups['HelloWorld'] = 'other';
+$wgSpecialPages['Performance'] = 'SpecialPerformance';
+$wgSpecialPageGroups['Performance'] = 'other';
 
 // Register modules
 /*

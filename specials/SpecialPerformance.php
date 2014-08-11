@@ -6,21 +6,21 @@
  * @ingroup Extensions
  */
 
-class SpecialHelloWorld extends SpecialPage {
+class SpecialPerformance extends SpecialPage {
 	public function __construct() {
-		parent::__construct( 'HelloWorld' );
+		parent::__construct( 'Performance' );
 	}
 
 	/**
 	 * Shows the page to the user.
 	 * @param string $sub: The subpage string argument (if any).
-	 *  [[Special:HelloWorld/subpage]].
+	 *  [[Special:Performance/subpage]].
 	 */
 	public function execute( $sub ) {
 		$out = $this->getOutput();
 
-		$out->setPageTitle( $this->msg( 'boilerplate-helloworld' ) );
+		$out->setPageTitle( $this->msg( 'performance-special' ) );
 
-		$out->addWikiMsg( 'boilerplate-helloworld-intro' );
+		$out->addWikiMsg( 'performance-special-text' );
 	}
 }
