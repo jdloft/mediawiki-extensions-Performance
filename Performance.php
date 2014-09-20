@@ -8,6 +8,16 @@
  * @license GNU General Public Licence 2.0 or later
  */
 
+# Alert the user that this is not a valid entry point to MediaWiki if they try to access the special pages file directly.
+if ( !defined( 'MEDIAWIKI' ) ) {
+	echo <<<EOT
+To install this extension, put the following line in LocalSettings.php:
+require_once( "$IP/extensions/Echo/Echo.php" );
+EOT;
+	exit( 1 );
+}
+
+# Credits
 $wgExtensionCredits['other'][] = array(
 	'path' => __FILE__,
 	'name' => 'Performance',
@@ -22,10 +32,11 @@ $wgExtensionCredits['other'][] = array(
 /* Setup */
 
 // Register files
-$wgAutoloadClasses['PerformanceHooks'] = __DIR__ . '/Performance.hooks.php';
-$wgAutoloadClasses['SpecialPerformance'] = __DIR__ . '/specials/SpecialPerformance.php';
-$wgMessagesDirs['Performance'] = __DIR__ . '/i18n';
-$wgExtensionMessagesFiles['PerformanceAlias'] = __DIR__ . '/Performance.i18n.alias.php';
+$dir = dirname( __FILE__ ) . '/';
+$wgAutoloadClasses['PerformanceHooks'] = $dir . '/Performance.hooks.php';
+$wgAutoloadClasses['SpecialPerformance'] = $dir . '/specials/SpecialPerformance.php';
+$wgMessagesDirs['Performance'] = $dir . '/i18n';
+$wgExtensionMessagesFiles['PerformanceAliases'] = $dir . '/Performance.alias.php';
 
 // Register hooks
 //$wgHooks['NameOfHook'][] = 'PerformanceHooks::onNameOfHook';
@@ -48,7 +59,7 @@ $wgResourceModules['ext.BoilerPlate.foo'] = array(
 	'dependencies' => array(
 	),
 
-	'localBasePath' => __DIR__,
+	'localBasePath' => $dir,
 	'remoteExtPath' => 'Performance',
 );
 */
